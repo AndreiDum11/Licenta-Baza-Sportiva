@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../images/login_background.jpg);
+
+}
+.wrapper{
+    position: relative;
+    width: 750px;
+    height: 450px;
+    background: #d4d9d3;
+    border: 1px solid rgba(156, 20, 20, 0.2);
+    backdrop-filter: blur(20px);
+    color:#DF1B3F;
+    border-radius: 10px;
+    padding: 30px 40px;
+    overflow: hidden;
+    box-shadow: 0 0 15px #d4d9d3;
+}
+
+
+
+.wrapper .form-box-login{
+    position: absolute;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper .form-box-login.login{
+    left:0;
+    padding: 0  60px 0 40px;
+}
+
+.wrapper .form-box-login .animation{
+    transform: translateX(0);
+    opacity: 1;
+    filter:blur(0);
+    transition: 2s ease;
+}
+.wrapper.active .form-box-login .animation{
+    transform: translateX(-120%);
+    opacity: 0;
+    filter: blur(10px);
+    transition-delay:calc(.1s *var(--i));
+}
+.wrapper .form-box-register{
+    position:absolute;
+    top:24%;
+    left:54%;
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+.wrapper .form-box-register.register{
+    right: 0;
+    padding: 0 60px;
+}
+.wrapper.active .form-box-register{
+    pointer-events: auto;
+}
+.wrapper .form-box-register .animation{
+    transform: translateX(120%);
+    opacity: 0;
+    filter:blur(10px);
+    transition: .7s ease;
+    
+}
+.wrapper.active .form-box-register .animation{
+    transform: translateX(0);
+    opacity:1;
+    filter:blur(0);
+    transition-delay:calc(.1s *var(--j));
+}
+/*----------------------------------------------*/
+.form-box-login h2{
+    font-size: 32px;
+    color: #DF1B3F;
+    text-align: center;
+}
+
+.form-box-login .input-box{
+    position: relative;
+    width: 100%;
+    height: 25%;
+    margin: 25px 0;
+}
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+.form-box-register h2{
+    font-size: 32px;
+    color: #DF1B3F;
+    text-align: center;
+}
+.form-box-register .input-box{
+    position: relative;
+    width: 100%;
+    height: 25%;
+    margin: 25px 0;
+}
+/*----------------------------------------------*/
+/* Input ------------------------------------------------------*/
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #DF1B3F;
+    padding-right: 23px;
+    font-size: 16px;
+    color:#750200;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.input-box input:focus,
+.input-box input:valid{
+    border-bottom-color:#750200;
+}
+.input-box label{
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color:#DF1B3F;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+    color:#750200;
+}
+.input-box i{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color:#DF1B3F;
+    cursor: pointer;
+    margin-left: -30px;
+    transition: .5s;
+}
+.input-box input:focus~i,
+.input-box input:valid~i{    
+    color:#750200;
+}
+/* ------------------------------------------------------ */
+/*Buton --------------------------------------------------*/
+.btn{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #DF1B3F;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    color:#D6D6D6;
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+}
+.btn::before {
+    content:'';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background: linear-gradient(#750200,#DF1B3F,#750200,#DF1B3F);
+    z-index: -1;
+    transition: .5s;
+}
+.btn:hover::before{
+    top : 0;
+}
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+.form-box-login .logreg-link{
+    font-size: 14.5px;
+    color:#DF1B3F;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+.logreg-link p a{
+    color: #DF1B3F;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logreg-link p a:hover{
+    text-decoration: underline;
+}
+
+/*---------------------------------------------------------------*/
+.wrapper .description-info {
+    position: absolute;
+    top:0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper .description-info.login{
+    right: 0;
+    text-align: right;
+    padding: 0 40px 60px 150px;
+}
+.wrapper .description-info.login .animation{
+    transform: translateX(0);
+    opacity: 1;
+    filter:blur(0);
+    transition: 2s ease;
+}
+.wrapper.active .description-info.login .animation{
+    transform: translateX(120%);
+    opacity: 0;
+    filter: blur(10px);
+    transition-delay:calc(.1s *var(--j));
+}
+
+
+
+
+
+.wrapper .description-info.register{
+    left:0;
+    text-align: left;
+    padding: 0 150px 60px 40px;
+    pointer-events: none;
+}
+.wrapper .description-info.register .animation{
+    /* transform: translateX(-120%); */
+    opacity: 0;
+    filter: blur(10px);
+    transition: .7s ease;
+} 
+.wrapper.active .description-info.register .animation{
+    opacity:1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition-delay:calc(.1s *var(--j));
+}
+
+
+
+
+.description-info h2{
+    font-size: 32px;
+    color:#FCB300;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+.description-info p{
+    font-size: 18px;
+    color: #FCB300;
+}
+
+
+
+
+
+
+
+.wrapper .css-animation{
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 850px;
+    height: 600px;
+    background: linear-gradient(45deg,#DF1B3F,#750200);
+    border-bottom: 2px solid rgba(156, 20, 20, 0.2) ;
+    border-radius: 10px;
+   transform: rotate(10deg) skewY(40deg);
+   
+    transform-origin: bottom right;
+    transition: 1.5s ease;
+}
+.wrapper.active .css-animation{
+    transform: rotate(0) skewY(0);
+    transition-delay:  .5s;
+}
+.wrapper .css-animation2{
+    position: absolute;
+    top: 100%;
+    left: 250px;
+    width: 850px;
+    height: 700px;
+    background: #d4d9d3;
+    
+    border-bottom: 2px solid rgba(156, 20, 20, 0.2) ;
+    border-radius: 10px;
+    transform: rotate(0) skewY(0);
+    transition: 1.5s;
+    transform-origin: bottom left;
+}
+.wrapper.active .css-animation2{
+    transform: rotate(-11deg) skewY(-41deg);
+    transition-delay: 1.5s;
+}

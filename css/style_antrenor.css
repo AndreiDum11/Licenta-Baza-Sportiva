@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root{
+    scrollbar-color: rgb(210,210,210) rgb(46,54,69) !important;
+    scrollbar-width: thin !important;
+}
+*{
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    /*text-transform: capitalize;*/
+}
+html{
+    font-size: 100%;
+    overflow:scroll;
+    background-image: url(../images/login_background.jpg);
+}
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+html::-webkit-scrollbar-track{
+    background-color: black;
+}
+
+section{
+    padding: 2rem ;
+}
+@keyframes fadeIn{
+    0%{
+        transform: scale(.5);
+        opacity: 0;
+    }
+}
+.heading{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-bottom: 1.5rem;
+   margin-bottom: 1.5rem;
+   gap: 1.5rem;
+   flex-wrap: wrap;
+   border-bottom: 1rem;
+}
+
+.heading h1{
+   font-size: 1.5rem;
+   color: #19204e;
+   text-transform: capitalize;
+}
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+   display: inline-block;
+   background-color:#fcb300;
+   margin-top: 1rem;
+   text-align: center;
+   padding: 1rem 3rem;
+   font-size: 1rem;
+   border-radius: .5rem;
+   color: #19204e;
+   cursor: pointer;
+   border: .1rem solid #19204e;
+   
+}
+.inline-option-btn:hover{
+   background-color: #16a085;
+}
+.inline-delete-btn:hover{
+   background-color: #df1b3f;
+}
+.profil_antrenor .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: #d4d4d4;
+    border: .1rem solid #19204e;
+    padding: 2rem;
+    border-radius: 20px;
+ }
+ 
+ .profil_antrenor .row .col{
+    flex: 1 1 40rem;
+ }
+ 
+ .profil_antrenor .row .col .image{
+    width: 100%;
+    height: 30rem;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: .1rem solid #19204e;
+ }
+ 
+ .profil_antrenor .row .col .title{
+    font-size: 1.5rem;
+    display: block;
+    color: #19204e;
+ }
+ 
+ .profil_antrenor .row .col .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+ 
+ .profil_antrenor .row .col .flex .total-reviews{
+    text-align: center;
+ }
+ 
+ .profil_antrenor .row .col .flex .total-reviews h3{
+    font-size: 5rem;
+    color: #19204e;
+ }
+ 
+ .profil_antrenor .row .col .flex .total-reviews i{
+    font-size: 2rem;
+ }
+ 
+ .profil_antrenor .row .col .flex .total-reviews p{
+    font-size: 1.8rem;
+    color: #19204e;
+    padding-top: 1rem;
+ }
+ 
+ 
+ .profil_antrenor .row .col .flex .total-ratings{
+    font-size: 2rem;
+ }
+ 
+ .profil_antrenor .row .col .flex .total-ratings p{
+    padding: .3rem 0;
+ }
+ 
+ .profil_antrenor .row .col .flex .total-ratings p i{
+    color: #fcb300;
+ }
+ 
+ .profil_antrenor .row .col .flex .total-ratings p span{
+    color: #fcb300;
+ }
+ .review_antrenor .box-container{
+   display: grid;
+   row-gap: 2rem;
+   background-color: #d4d4d4;
+   border: .1rem solid #19204e;
+   border-radius: 20px;
+   padding: 2rem;
+}
+
+.review_antrenor .box-container .box{
+   border-bottom: .1rem solid #19204e;
+   overflow-x: hidden;
+   padding-bottom: 1.5rem;
+   position: relative;
+}
+
+.review_antrenor .box-container .box .user{
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   margin-bottom: 1rem;
+}
+
+.review_antrenor .box-container .box .user h3{
+   font-size: 1.5rem;
+   background-color: #19204e;
+   text-transform: uppercase;
+   text-align: center;
+   line-height: 6.5rem;   
+}
+
+.review_antrenor .box-container .box .user p{
+   font-size: 1.5rem;
+   color: #19204e;
+   
+   padding-bottom: .2rem;
+}
+
+.review_antrenor .box-container .box .user span{
+   color:#19204e;
+   font-size: 1.2rem;
+}
+
+.review_antrenor .box-container .box .ratings{
+   position: absolute;
+   top: 0; right: 0;
+   z-index: 10;
+}
+
+.review_antrenor .box-container .box .ratings p{
+   border-radius: 20px;
+   color: #fcb300;
+   padding: .5rem 1rem;
+}
+
+.review_antrenor .box-container .box .ratings p span{
+   font-size: 2rem;
+}
+
+.review_antrenor .box-container .box .ratings p i{
+   font-size: 1.5rem;
+}
+
+.review_antrenor .box-container .box .title{
+   font-size: 1.5rem;
+   color: #19204e;
+   padding: .5rem 0;
+}
+
+.review_antrenor .box-container .box .description{
+   font-size: 1.4rem;
+   color: #19204e;
+   line-height: 1.2;
+}
+@media (max-width:991px){
+   html{
+      font-size: 55%;
+   }
+}
+
+@media (max-width:450px){
+   html{
+      font-size: 50%;
+   }
+}
